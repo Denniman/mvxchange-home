@@ -1,46 +1,112 @@
-import React, { Fragment, useState } from "react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Icon } from "../../atom";
-import { MobileMenu } from "./MobileMenu";
 
 export const Navigation = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showServices, setShowServices] = useState(false);
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("click", close);
+    return () => document.removeEventListener("click", close);
+  }, []);
+
+  function close(e) {
+    setShowServices(e && e.target === ref.current);
+  }
 
   return (
-    <Fragment>
-      <nav
-        className={`${
-          showMenu ? "bg-bgNav" : "bg-white"
-        } flex justify-between  px-2 py-5 tablet:bg-white`}
-      >
-        <div className='flex flex-1'>
-          <div>
-            <Icon name='logo' />
-          </div>
+    <nav className='hidden laptop:flex font-[Montserrat-Medium] justify-between px-[3rem] items-center rounded-[10px] bg-white py-[1.5rem] text-[1.4rem]'>
+      <div>
+        <Icon name='logo-main' />
+      </div>
 
-          <div className='hidden tablet:flex flex-1 justify-between'>
-            <ul className='tablet:grid place-items-center'>
-              <li>About</li>
-              <li>Services</li>
-              <li>Resources</li>
-              <li>Partners</li>
-              <li>Speak to us</li>
-            </ul>
+      <div>
+        <ul className='flex justify-between items-center gap-[1.8rem]'>
+          <li className='cursor-pointer'>About</li>
+          <li
+            ref={ref}
+            className='relative group cursor-pointer'
+            onClick={() => setShowServices(!showServices)}
+          >
+            Services
+            {showServices && (
+              <div className='absolute top-[5rem] group-hover:block shadow-white-500/50 bg-white rounded-[10px] px-[2rem] py-[3rem]  min-w-[38rem]'>
+                <ul className='flex flex-col gap-4'>
+                  <li className='cursor-pointer px-[1rem] py-[5px] rounded-[7px] hover:bg-forwardHover'>
+                    <div className='flex items-center gap-5'>
+                      <div>
+                        <Icon name='freight' />
+                      </div>
+                      <div>
+                        <p>Freight Forwarding</p>
+                        <p className='font-[Montserrat-Regular] text-[1.2rem]'>
+                          Easy Freight Forwarding Service
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className='cursor-pointer px-[1rem] py-[5px] rounded-[7px] hover:bg-financeHover'>
+                    <div className='flex items-center gap-5'>
+                      <div>
+                        <Icon name='house' />
+                      </div>
 
-            <div>
-              <ul>
-                <li>Sign in</li>
-                <li>Sign up</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className='phone:hidden' onClick={() => setShowMenu(!showMenu)}>
-          {showMenu ? <XIcon className='w-5' /> : <MenuIcon className='w-5' />}
-        </div>
-      </nav>
-      {showMenu && <MobileMenu />}
-    </Fragment>
+                      <div>
+                        <p>Freight Finance</p>
+                        <p className='font-[Montserrat-Regular] text-[1.2rem]'>
+                          Get finance for your freight forwarding needs
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className='cursor-pointer px-[1.5rem] py-[5px] rounded-[7px] hover:bg-forwardHover'>
+                    <div className='flex items-center gap-5'>
+                      <div>
+                        <Icon name='delivery-truck' />
+                      </div>
+
+                      <div>
+                        <p>Haulage</p>
+                        <p className='font-[Montserrat-Regular] text-[1.2rem]'>
+                          Overland Logistics You Can Rely On
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className='cursor-pointer px-[1.5rem] py-[5px] rounded-[7px] hover:bg-financeHover'>
+                    <div className='flex items-center gap-5'>
+                      <div>
+                        <Icon name='receipt' />
+                      </div>
+
+                      <div>
+                        <p>Customs</p>
+                        <p className='font-[Montserrat-Regular] text-[1.2rem]'>
+                          Clear your cargo fast
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </li>
+          <li className='cursor-pointer'>Resources</li>
+          <li className='cursor-pointer'>Partners</li>
+          <li className='cursor-pointer'>Speak to us</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul className='flex justify-between items-center gap-[1.8rem]'>
+          <li className='cursor-pointer'>Sign in</li>
+          <li className='bg-secondary cursor-pointer rounded-[10px] text-white px-[4rem] py-[1.5rem]'>
+            Sign up
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };

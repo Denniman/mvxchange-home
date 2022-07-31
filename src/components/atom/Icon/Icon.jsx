@@ -1,6 +1,9 @@
+import Talk from "./assets/talk";
 import Logo from "./assets/logo";
 import Ship from "./assets/ship";
+import House from "./assets/house";
 import Medium from "./assets/medium";
+import Freight from "./assets/freight";
 import Twitter from "./assets/twitter";
 import Haulage from "./assets/finance";
 import Finance from "./assets/finance";
@@ -9,9 +12,12 @@ import Facebook from "./assets/facebook";
 import Linkedin from "./assets/linkedin";
 import LogoMain from "./assets/logo-main";
 import Instagram from "./assets/instagram";
+import ArrowDown from "./assets/arrow-down";
 import LogoBlack from "./assets/logo-black";
 import ChevronLeft from "./assets/chevron-left";
 import ChevronRight from "./assets/chevron-right";
+import MobileUpArrow from "./assets/mobile-up-arrow";
+import DeliveryTruck from "./assets/delivery-truck";
 import ChevronRightBlue from "./assets/chevron-right-blue";
 
 export const Icon = ({ name, ...props }) => {
@@ -19,11 +25,30 @@ export const Icon = ({ name, ...props }) => {
     case "logo": {
       return <Logo {...props} />;
     }
+    case "talk": {
+      return <Talk {...props} />;
+    }
     case "right": {
       return <ChevronRight {...props} />;
     }
+    case "delivery-truck": {
+      return <DeliveryTruck {...props} />;
+    }
+    case "mobile-up": {
+      return <MobileUpArrow {...props} />;
+    }
+    case "freight": {
+      return <Freight {...props} />;
+    }
+    case "house": {
+      return <House {...props} />;
+    }
     case "ship": {
       return <Ship {...props} />;
+    }
+
+    case "arrow-down": {
+      return <ArrowDown {...props} />;
     }
 
     case "logo-main": {
