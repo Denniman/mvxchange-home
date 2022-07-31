@@ -29,7 +29,7 @@ export const Hero = () => {
             </button>
           </div>
 
-          <div className='absolute laptop:right-[6rem] right-0 text-[2px] top-[45rem] laptop:top-[68rem]'>
+          <div className='fixed laptop:right-[6rem] right-0 text-[2px] top-[45rem] laptop:top-[45rem]'>
             <Icon name='talk' />
           </div>
           <div className='fixed laptop:hidden right-0 text-[2px] top-[42rem] laptop:top-[68rem]'>
