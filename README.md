@@ -27,7 +27,7 @@ The design paradigm also details mentions templates and pages. Templates are con
 
 ## Component structure
 
-The component folder structure should follow this pattern. See the Button atom as a reference implementation
+The component folder structure follows this pattern.
 
 ```
 ./Component
