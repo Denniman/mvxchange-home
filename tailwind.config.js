@@ -22,10 +22,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#333333",
-        secondary: "#FF8A00",
         tertiary: "#005ECD",
+        secondary: "#FF8A00",
         footer: "rgba(0,94,205,0.03)",
         bgNav: "rgba(255, 138, 0, 0.07)",
+        forwardHover: "rgba(217, 231, 248, 0.3)",
       },
     },
   },
