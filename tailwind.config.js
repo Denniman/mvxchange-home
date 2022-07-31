@@ -19,6 +19,7 @@ module.exports = {
         secondary: "#FF8A00",
         footer: "rgba(0,94,205,0.03)",
         bgNav: "rgba(255, 138, 0, 0.07)",
+        financeHover: "rgba(255, 195, 129, 0.2)",
         forwardHover: "rgba(217, 231, 248, 0.3)",
       },
     },

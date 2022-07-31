@@ -22,8 +22,8 @@ export const MobileMenu = () => {
             </div>
 
             {showMenu && (
-              <Fragment>
-                <ul className='mt-[7.3rem]'>
+              <div className='mt-[7.3rem] h-screen'>
+                <ul>
                   <li className='mb-[2.6rem]'>About</li>
                   <li
                     className='mb-[2.6rem] flex items-center justify-between'
@@ -42,7 +42,7 @@ export const MobileMenu = () => {
                 <div>
                   <button className='btn-primary'>Sign up</button>
                 </div>
-              </Fragment>
+              </div>
             )}
           </div>
 
@@ -60,7 +60,7 @@ export const MobileMenu = () => {
       )}
 
       {showServices && (
-        <div className='pb-[10rem] top-0 right-0 left-0 w-full z-[999] fixed bg-[#fffdfb]'>
+        <div className='pb-[10rem] top-0 right-0 left-0 w-full z-[999] fixed bg-[#fffdfb] h-screen'>
           <div
             className='flex gap-4 border-b-[1px] pb-[3rem] px-[2rem] pt-[2rem]'
             onClick={() => setShowServices(false)}

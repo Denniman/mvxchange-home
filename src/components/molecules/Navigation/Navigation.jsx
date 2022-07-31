@@ -32,9 +32,9 @@ export const Navigation = () => {
           >
             Services
             {showServices && (
-              <div className='absolute top-[5rem] group-hover:block shadow-white-500/50 bg-white rounded-[10px] px-[2rem] py-[3rem]  min-w-[38rem]'>
+              <div className='absolute top-[2rem] group-hover:block shadow-lg shadow-black-500/50 bg-white rounded-[20px] px-[2rem] py-[3rem]  min-w-[43rem]'>
                 <ul className='flex flex-col gap-4'>
-                  <li className='cursor-pointer px-[1rem] py-[5px] rounded-[7px] hover:bg-forwardHover'>
+                  <li className='cursor-pointer p-[1.3rem] rounded-[7px] hover:bg-forwardHover'>
                     <div className='flex items-center gap-5'>
                       <div>
                         <Icon name='freight' />
@@ -47,7 +47,8 @@ export const Navigation = () => {
                       </div>
                     </div>
                   </li>
-                  <li className='cursor-pointer px-[1rem] py-[5px] rounded-[7px] hover:bg-financeHover'>
+
+                  <li className='cursor-pointer p-[1.3rem] rounded-[7px] hover:bg-financeHover'>
                     <div className='flex items-center gap-5'>
                       <div>
                         <Icon name='house' />
@@ -61,7 +62,8 @@ export const Navigation = () => {
                       </div>
                     </div>
                   </li>
-                  <li className='cursor-pointer px-[1.5rem] py-[5px] rounded-[7px] hover:bg-forwardHover'>
+
+                  <li className='cursor-pointer p-[1.3rem] rounded-[7px] hover:bg-forwardHover'>
                     <div className='flex items-center gap-5'>
                       <div>
                         <Icon name='delivery-truck' />
@@ -75,7 +77,8 @@ export const Navigation = () => {
                       </div>
                     </div>
                   </li>
-                  <li className='cursor-pointer px-[1.5rem] py-[5px] rounded-[7px] hover:bg-financeHover'>
+
+                  <li className='cursor-pointer p-[1.3rem] rounded-[7px] hover:bg-financeHover'>
                     <div className='flex items-center gap-5'>
                       <div>
                         <Icon name='receipt' />
