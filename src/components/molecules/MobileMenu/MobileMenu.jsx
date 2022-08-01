@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 import { Icon } from "../../atom";
@@ -9,71 +9,69 @@ export const MobileMenu = () => {
   const [showServices, setShowServices] = useState(false);
 
   return (
-    <nav
-      className='laptop:hidden text-[1.8rem] mb-[7rem] font-[Montserrat-Medium] '
-      id='access'
-    >
-      <div className='absolute top-7 left-8'>
-        <Icon name='logo' />
-      </div>
-
-      <div
-        className='absolute top-7 right-8'
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        <MenuIcon className='w-5 scale-150' />
-      </div>
-
-      <div
-        className={`${
-          showMenu
-            ? "bg-[#fffdfb] -translate-x-[1%] ease-in-out duration-150"
-            : "bg-white -translate-x-full ease-out duration-150"
-        } pt-4 px-[2rem] pb-[4rem] top-0 right-0 left-0 w-full z-[999] fixed translate-x-0`}
-      >
-        <div className='mt-[7px]'>
+    <Fragment>
+      <div className='w-full flex justify-between bg-white laptop:hidden py-7 px-[2rem] fixed w-inherit'>
+        <div>
           <Icon name='logo' />
         </div>
 
-        <div className='mt-[7.3rem] h-screen '>
-          <ul>
-            <li className='mb-[2.6rem]'>About</li>
-            <li
-              className='mb-[2.6rem] flex items-center justify-between'
-              onClick={() => setShowServices(true)}
-            >
-              <div>Services</div>
-              <div>
-                <Icon name='right' />
-              </div>
-            </li>
-            <li className='mb-[2.6rem]'>Resources</li>
-            <li className='mb-[2.4rem]'>Partners</li>
-            <li className='mb-[2.4rem]'>Speak to us</li>
-            <li className='mb-[2.4rem] text-secondary'>Sign in</li>
-          </ul>
-          <div>
-            <button className='btn-primary'>Sign up</button>
-          </div>
-        </div>
-
-        <div
-          className='laptop:hidden absolute right-8 top-7 text-3xl '
-          onClick={() => setShowMenu(!showMenu)}
-        >
-          <XIcon className='w-5 scale-150' />
+        <div onClick={() => setShowMenu(!showMenu)}>
+          <MenuIcon className='w-5 scale-150' />
         </div>
       </div>
+
+      <nav className='text-[1.8rem] font-[Montserrat-Medium]'>
+        <div
+          className={`${
+            showMenu
+              ? "bg-[#fffdfb] translate-x-0 ease-in-out duration-150"
+              : "bg-white translate-x-[-100%]  ease-out duration-150 "
+          } pt-4 px-[2rem] pb-[4rem] top-0 right-0 left-0 w-full z-[999] fixed translate-x-0 `}
+        >
+          <div className='mt-[7px]'>
+            <Icon name='logo' />
+          </div>
+
+          <div className='mt-[7.3rem] h-screen '>
+            <ul>
+              <li className='mb-[2.6rem]'>About</li>
+              <li
+                className='mb-[2.6rem] flex items-center justify-between'
+                onClick={() => setShowServices(true)}
+              >
+                <div>Services</div>
+                <div>
+                  <Icon name='right' />
+                </div>
+              </li>
+              <li className='mb-[2.6rem]'>Resources</li>
+              <li className='mb-[2.4rem]'>Partners</li>
+              <li className='mb-[2.4rem]'>Speak to us</li>
+              <li className='mb-[2.4rem] text-secondary'>Sign in</li>
+            </ul>
+            <div>
+              <button className='btn-primary'>Sign up</button>
+            </div>
+          </div>
+
+          <div
+            className='laptop:hidden absolute right-8 top-7 text-3xl '
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <XIcon className='w-5 scale-150' />
+          </div>
+        </div>
+      </nav>
 
       <div
         className={`${
           showServices
             ? "-translate-x-[1%] ease-in-out duration-150"
-            : "-translate-x-full ease-out duration-150"
-        } pb-[10rem] top-0 right-0 left-0 w-full z-[999] fixed bg-[#fffdfb] h-screen translate-x-0 `}
+            : "translate-x-[-100%] ease-out duration-150"
+        } pb-[10rem] top-0 right-0 left-0 w-full z-[999] fixed bg-[#fffdfb] h-screen translate-x-0 text-[1.8rem] font-[Montserrat-Medium]`}
       >
         <div
-          className='flex gap-4 border-b-[1px] pb-[3rem] px-[2rem] pt-[2rem]'
+          className='flex gap-4 border-b-[1px] pb-[3rem] px-[2rem] pt-[2rem] items-center'
           onClick={() => setShowServices(false)}
         >
           <div>
@@ -139,6 +137,6 @@ export const MobileMenu = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </Fragment>
   );
 };
