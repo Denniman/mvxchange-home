@@ -9,7 +9,7 @@ export const Hero = () => {
       <div className="pb-[3.4rem] pt-[1rem] rounded-b-[1rem] laptop:px-[16rem] rounded-r-[1rem] px-[1.6rem] bg-cover bg-center bg-bgNav bg-[url('https://res.cloudinary.com/dn8vprize/image/upload/v1659093697/subtract_e6ak5a.svg')]">
         <Navigation />
         <main>
-          <div className='tablet:max-w-[60rem] tablet:mt-[10rem]' id='access'>
+          <div className='tablet:max-w-[60rem] tablet:mt-[10rem]'>
             <h1 className='font-secondary text-[3.4rem] laptop:text-[7rem]'>
               Access <span className='text-tertiary'>Fast Finance</span> and
               <span className='text-secondary'> Easy Shipping</span> Around The
@@ -32,13 +32,13 @@ export const Hero = () => {
           <div className='fixed laptop:right-[6rem] right-0 text-[2px] top-[45rem] laptop:top-[45rem]'>
             <Icon name='talk' />
           </div>
-          <div className='fixed laptop:hidden right-0 text-[2px] top-[42rem] laptop:top-[68rem]'>
+          <div className='fixed laptop:hidden right-0 text-[2px] top-[40rem] laptop:top-[68rem]'>
             <Link to='access' smooth={true}>
               <Icon name='mobile-up' />
             </Link>
           </div>
 
-          <div className='hidden absolute right-[20rem] top-[60rem] tablet:flex'>
+          <div className='hidden absolute right-[20rem] top-[58rem] tablet:flex'>
             <Link to='footer' smooth={true}>
               <button className='flex items-center flex-col gap-4 text-[1.6rem]'>
                 <Icon name='arrow-down' />
@@ -47,7 +47,7 @@ export const Hero = () => {
             </Link>
           </div>
 
-          <article className='round mt-[10rem] tablet:mt-[13rem] flex items-center justify-center'>
+          <article className='round mt-[12rem] tablet:mt-[13rem] flex items-center justify-center'>
             <iframe
               className='rounded-[10px] max-h-[315px] tablet:min-h-[45rem]'
               width='100%'
