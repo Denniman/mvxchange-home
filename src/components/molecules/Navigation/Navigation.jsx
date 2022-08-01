@@ -17,7 +17,7 @@ export const Navigation = () => {
   }
 
   return (
-    <nav className='hidden laptop:flex font-[Montserrat-Medium] fixed w-[103rem] -top-7 right-[50%]  left-[50%] -translate-x-1/2 translate-y-1/2 justify-between px-[3rem] items-center rounded-[10px] bg-mainNav py-[1.5rem] text-[1.4rem]'>
+    <nav className='hidden laptop:flex font-[Montserrat-Medium] fixed  w-[76%] -top-7 right-[50%]  left-[50%] -translate-x-1/2 translate-y-1/2 justify-between px-[3rem] items-center rounded-[10px] bg-mainNav py-[1.5rem] text-[1.4rem]'>
       <div>
         <Icon name='logo-main' />
       </div>
