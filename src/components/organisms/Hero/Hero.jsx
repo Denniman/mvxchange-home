@@ -5,7 +5,7 @@ import { Navigation } from "../../molecules";
 
 export const Hero = () => {
   return (
-    <div className='px-5 laptop:px-[2.7rem] laptop:pt-[1.5rem pb-[10rem] bg-white'>
+    <div className='px-5 laptop:px-[2.7rem] laptop:pt-[1.5rem] pb-[10rem] bg-white'>
       <div className="pb-[3.4rem] pt-[6rem] rounded-b-[1rem] laptop:px-[16rem] rounded-r-[1rem] px-[1.6rem] bg-cover bg-center bg-bgNav bg-[url('https://res.cloudinary.com/dn8vprize/image/upload/v1659093697/subtract_e6ak5a.svg')]">
         <Navigation />
         <main>
