@@ -30,7 +30,7 @@ export const Hero = () => {
           </div>
 
           <div className='fixed laptop:right-[6rem] right-0 text-[2px] top-[45rem] laptop:top-[45rem]'>
-            <Icon name='talk' />
+            <Icon name='talk' className='scale-60 ' />
           </div>
           <div className='fixed laptop:hidden right-0 text-[2px] top-[40rem] laptop:top-[68rem]'>
             <Link to='access' smooth={true}>

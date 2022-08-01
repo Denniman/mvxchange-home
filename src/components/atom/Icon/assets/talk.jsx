@@ -3,7 +3,6 @@ import React from "react";
 const Talk = ({ ...props }) => {
   return (
     <svg
-      transform='scale(0.7)'
       width={116}
       height={116}
       fill='none'
