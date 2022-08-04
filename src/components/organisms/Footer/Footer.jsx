@@ -28,13 +28,18 @@ export const Footer = () => {
             <Icon name='logo-main' />
           </div>
           <ul>
-            <li className='mb-5'>T: +2347040119703</li>
-            <li className='mb-5'>E: hello@mvx.trade</li>
-            <li className='font-[Montserrat-SemiBold]'>Austin:</li>
+            <li className='mb-5 font-[Montserrat-SemiBold] '>
+              T: +2347040119703
+            </li>
+            <li className='mb-5 font-[Montserrat-SemiBold] underline'>
+              E: hello@mvx.trade
+            </li>
+            <li className='font-[Montserrat-SemiBold] mb-[8px]'>Austin:</li>
             <li className='mb-5 font-[Montserrat-Regular] text-[#767676]'>
               7000 North Mopac Expressway, Austin, TX, 78731 T: +1 512 514 6221
             </li>
-            <li className='font-[Montserrat-SemiBold]'>Lagos:</li>
+
+            <li className='font-[Montserrat-SemiBold] mb-[8px]'>Lagos:</li>
             <li className='font-[Montserrat-Regular] text-[#767676]'>
               19 Dr. S Ezekuse Close, Lekki Phase 1, Lagos
             </li>

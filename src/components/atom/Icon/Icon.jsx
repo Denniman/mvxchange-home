@@ -1,5 +1,6 @@
 import Talk from "./assets/talk";
 import Logo from "./assets/logo";
+import Close from "./assets/close";
 import Ship from "./assets/ship";
 import House from "./assets/house";
 import Medium from "./assets/medium";
@@ -10,6 +11,7 @@ import Finance from "./assets/finance";
 import Receipt from "./assets/receipt";
 import Facebook from "./assets/facebook";
 import Linkedin from "./assets/linkedin";
+import Hamburger from "./assets/hamburger";
 import LogoMain from "./assets/logo-main";
 import Instagram from "./assets/instagram";
 import ArrowDown from "./assets/arrow-down";
@@ -30,6 +32,13 @@ export const Icon = ({ name, ...props }) => {
     }
     case "right": {
       return <ChevronRight {...props} />;
+    }
+    case "close": {
+      return <Close {...props} />;
+    }
+
+    case "hamburger": {
+      return <Hamburger {...props} />;
     }
     case "delivery-truck": {
       return <DeliveryTruck {...props} />;

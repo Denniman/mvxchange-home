@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 import { Icon } from "../../atom";
 
@@ -8,28 +7,35 @@ export const MobileMenu = () => {
 
   const [showServices, setShowServices] = useState(false);
 
+
   return (
     <Fragment>
-      <div className='w-full flex justify-between bg-white laptop:hidden py-7 px-[2rem] fixed w-inherit'>
+      <div className='w-full flex items-center justify-between bg-white laptop:hidden py-7 px-[2rem] fixed w-inherit'>
         <div>
           <Icon name='logo' />
         </div>
 
         <div onClick={() => setShowMenu(!showMenu)}>
-          <MenuIcon className='w-5 scale-150' />
+          <Icon name='hamburger' />
         </div>
       </div>
 
-      <nav className='text-[1.8rem] font-[Montserrat-Medium]'>
+      <nav className='text-[1.8rem] font-[Montserrat-Medium] '>
         <div
           className={`${
             showMenu
               ? "bg-[#fffdfb] translate-x-0 ease-in-out duration-150"
               : "bg-white translate-x-[-100%]  ease-out duration-150 "
-          } pt-4 px-[2rem] pb-[4rem] top-0 right-0 left-0 w-full z-[999] fixed translate-x-0 `}
+          } pt-8 px-[2rem] pb-[4rem] top-0 right-0 left-0 w-full z-[999] fixed translate-x-0 `}
         >
-          <div className='mt-[7px]'>
-            <Icon name='logo' />
+          <div className='flex items-center justify-between mt-3'>
+            <div>
+              <Icon name='logo' />
+            </div>
+
+            <div onClick={() => setShowMenu(!showMenu)}>
+              <Icon name='close' />
+            </div>
           </div>
 
           <div className='mt-[7.3rem] h-screen '>
@@ -52,13 +58,6 @@ export const MobileMenu = () => {
             <div>
               <button className='btn-primary'>Sign up</button>
             </div>
-          </div>
-
-          <div
-            className='laptop:hidden absolute right-8 top-7 text-3xl '
-            onClick={() => setShowMenu(!showMenu)}
-          >
-            <XIcon className='w-5 scale-150' />
           </div>
         </div>
       </nav>
