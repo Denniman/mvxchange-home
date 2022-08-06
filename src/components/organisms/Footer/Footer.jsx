@@ -139,7 +139,7 @@ export const Footer = () => {
           </div>
           <div>
             <a
-              href='https://www.linkedin.com/company/mvx-hq/'
+              href='https://mvx-hq.medium.com/'
               target='_blank'
               rel='noreferrer'
             >
