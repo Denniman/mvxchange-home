@@ -95,7 +95,7 @@ export const Footer = () => {
       </div>
       <div className='flex tablet:hidden justify-between mt-[6.8rem] text-[1.4rem] font-[Montserrat-SemiBold]'>
         <p>T: +2347040119703</p>
-        <p>E: hello@mvx.trade</p>
+        <p className='underline'>E: hello@mvx.trade</p>
       </div>
 
       <div className='flex laptop:hidden justify-center gap-7  flex-col items-center mt-[1.7rem] tablet:mt-[3.5rem] text-[1.4rem]'>
@@ -120,28 +120,48 @@ export const Footer = () => {
 
         <div className='flex flex-row gap-5'>
           <div>
-            <a href='#social'>
+            <a
+              href='https://facebook.com/mvxhq/'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Icon name='facebook' />
             </a>
           </div>
           <div>
-            <a href='#social'>
+            <a
+              href='https://www.instagram.com/mvx_hq/'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Icon name='instagram' />
             </a>
           </div>
           <div>
-            <a href='#social'>
+            <a
+              href='https://www.linkedin.com/company/mvx-hq/'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Icon name='medium' />
             </a>
           </div>
           <div>
-            <a href='#social'>
+            <a
+              href='https://www.linkedin.com/company/mvx-hq/'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Icon name='linkedin' />
             </a>
           </div>
 
           <div>
-            <a href='#social'>
+            <a
+              href='https://twitter.com/mvx_hq'
+              target='_blank'
+              rel='noreferrer'
+            >
               <Icon name='twitter' />
             </a>
           </div>

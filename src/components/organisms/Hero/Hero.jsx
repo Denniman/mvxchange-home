@@ -9,7 +9,10 @@ export const Hero = () => {
       <div className="pb-[3.4rem] pt-[6rem] rounded-b-[1rem] laptop:px-[16rem] rounded-r-[1rem] px-[1.6rem] bg-cover bg-center bg-bgNav bg-[url('https://res.cloudinary.com/dn8vprize/image/upload/v1659093697/subtract_e6ak5a.svg')]">
         <Navigation />
         <main>
-          <div className='tablet:max-w-[60rem] tablet:mt-[10rem]' id='access'>
+          <div
+            className='tablet:max-w-[60rem] tablet:mt-[10rem] mt-[7rem]'
+            id='access'
+          >
             <h1 className='font-secondary text-[3.4rem] laptop:text-[7rem]'>
               Access <span className='text-tertiary'>Fast Finance</span> and
               <span className='text-secondary'> Easy Shipping</span> Around The
